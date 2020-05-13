@@ -1,0 +1,418 @@
+/* noto-serif-italic - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'),
+       url('../fonts/noto-serif-v8-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-serif-v8-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* noto-serif-regular - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif'), local('NotoSerif'),
+       url('../fonts/noto-serif-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-serif-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* cookie-regular - latin */
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cookie-Regular'),
+       url('../fonts/cookie-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/cookie-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%);
+    /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
+
+
+body {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+.site_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 50px;
+    padding-bottom: 130px;
+}
+
+
+.site_nav_list {
+    width: 485px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-family: 'Cookie';
+    font-style: normal;
+    font-size: 26px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #fed136;
+}
+
+
+.site_nav_list_item-link {    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.site_nav_list_item-link:hover {
+    color: #fed136;
+}
+
+
+/* SERVICES */
+
+
+.services {
+    padding-bottom: 125px; 
+}
+
+
+.services_title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.services_main_tittle {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-size: 40px;
+    line-height: 75px;
+    color: rgb(34, 34, 34);
+    text-transform: uppercase;
+}
+
+
+.services_discription_title {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(119, 119, 119);
+}
+
+
+.services_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.services_list_item {
+    width: 290px;
+}
+
+
+.services_list_item::before {
+    display: block;
+    content: "";
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(254, 209, 54);
+    border-radius: 50%;
+    width: 72px;
+    height: 71px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.services_list_item:first-child::before {
+    background-image: url(../image/icons/Icon-Basket.png);
+}
+
+
+.services_list_item:nth-child(2)::before {
+    background-image: url(../image/icons/Icon-Laptop.png);
+}
+
+
+.services_list_item:last-child::before {
+    background-image: url(../image/icons/Icon-Locked.png);
+}
+
+
+.services_list_item_title {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-size: 18px;
+    line-height: 75px;
+    color: rgb(34, 34, 34);
+    text-align: center;
+}
+
+
+.services_list_item_title_discription {
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 30px;
+    color: rgb(119, 119, 119);
+    text-indent: 20px;
+    text-align: center;
+}
+
+
+/* CONTACT_US */
+
+
+.contact_us {
+    background-color: black;
+    background-image: url(../image/map_image.png); 
+    background-position: right 1px bottom 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 212px;
+}
+
+
+.contact_us_title {
+    text-align: center;
+    padding-top: 110px;
+    margin-bottom: 80px;
+}
+
+
+.contact_us_main_tittle {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-size: 40px;
+    line-height: 75px;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+}
+
+
+.contact_us_description_title {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(119, 119, 119);
+}
+
+
+.contact_form-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.input_block {
+    height: 210px;
+    width: 455px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap; 
+}
+
+
+.message_text {
+    display: block;
+    width: 455px;
+    height: 210px;
+    padding-left: 20px;
+    padding-top: 20px;
+    resize: none;
+    border: 1px solid #cccccc;
+}
+
+
+.contact-form__input {
+    display: block;
+    width: 455px;
+    height: 50px;
+    padding-left: 20px;
+    border: 1px solid #cccccc;
+}
+
+
+.message_text:focus:not(:placeholder-shown) {
+    border: 1px solid green;
+}
+
+
+.contact-form__input:required:focus:valid:not(:placeholder-shown) {
+    border: 1px solid green;
+}
+
+
+.contact-form__input:required:focus:invalid:not(:placeholder-shown) {
+    border: 1px solid red;
+}
+
+
+.contact-form__input:focus {
+    outline: none;
+}
+
+
+.message_text:focus {
+    outline: none;
+}
+
+
+.contact_form-btn {
+    display: block;
+    width: 240px;
+    height: 65px;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 209, 54);
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;  
+    margin: 0 auto;
+}
+
+
+.contact-form__input::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "Montserrat";
+    font-style: bold;
+    color: rgb(187, 187, 187);
+    text-transform: uppercase;
+}
+
+
+.message_text::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "Montserrat";
+    font-style: bold;
+    color: rgb(187, 187, 187);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
